@@ -17,16 +17,6 @@ node* newNode(int data) {
     return temp;
 }
 
-void printPostOrder(node* node) {
-    if(node == NULL) return;
-
-    printPostOrder(node->left);
-
-    printPostOrder(node->right);
-
-    cout << node->data << " ";
-}
-
 void printInOrder(node* node){
     if(node == NULL) return;
 
@@ -45,6 +35,16 @@ void printPreOrder(node* node) {
     printPreOrder(node->left);
 
     printPreOrder(node->right);
+}
+
+void printPostOrder(node* node) {
+    if(node == NULL) return;
+
+    printPostOrder(node->left);
+
+    printPostOrder(node->right);
+
+    cout << node->data << " ";
 }
 
 int main() {
@@ -68,7 +68,7 @@ int main() {
     cout << "\n\nInorder traversal of binary tree is" << endl;
     printInOrder(root);
 
-    cout << "\n\nPreorder traversal of binary tree is" << endl;
+    cout << "\n\nPostorder traversal of binary tree is" << endl;
     printPostOrder(root);
 
     return 0;
