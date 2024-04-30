@@ -63,8 +63,8 @@ int main() {
     root->left->right = newNode(5);
     root->left->right->left = newNode(2);
     root->left->right->right = newNode(6);
-    root->right->left = newNode(9);
-    root->right->left->left = newNode(3);
+    root->right->right = newNode(9);
+    root->right->right->left = newNode(3);
 
     cout << "Level Order traversal of binary tree is" << endl;
     printLevelOrder(root);
